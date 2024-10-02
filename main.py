@@ -2,6 +2,8 @@ from network_discovery_sdk import NetworkDiscoverySdk
 import time
 import logging
 
+logging.basicConfig(level=logging.INFO, filename="pylog.log",filemode="w")
+
 # Create an instance of NetworkDiscoverySdk
 sdk = NetworkDiscoverySdk("edge-ai-service", 8000)
 
