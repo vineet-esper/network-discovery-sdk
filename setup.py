@@ -12,7 +12,7 @@ setup(
     description="A simple SDK for network service discovery using Zeroconf",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/keyur2maru/network-discovery-sdk",
+    url="https://github.com/vineet-esper/network-discovery-sdk",
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
