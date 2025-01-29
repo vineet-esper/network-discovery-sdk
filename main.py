@@ -5,7 +5,7 @@ import logging
 logging.basicConfig(level=logging.INFO, filename="pylog.log",filemode="w")
 
 # Create an instance of NetworkDiscoverySdk
-sdk = NetworkDiscoverySdk("edge-ai-service", 8000)
+sdk = NetworkDiscoverySdk("EsperLocalCache", 8020)
 
 try:
     # Register the service

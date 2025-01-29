@@ -13,12 +13,18 @@ class NetworkDiscoverySdk:
     def register(self):
         self.service_ip = self.__get_ip()
         print(f"Server IP: {self.service_ip}")
+        file_path = os.path.expanduser("~/certs/pkcs_base64.txt")
+        with open(file_path, "r") as file:
+            certString = file.read()
+
+        # Print cert
+        print(certString)
         service_info = ServiceInfo(
             service_type,
             f"{self.service_name}.{service_type}",
             addresses=[socket.inet_aton(self.service_ip)],
             port=self.service_port,
-            properties={"description": "This is " + self.service_name + " service running on " + self.service_ip + ":" + str(self.service_port)},
+            properties={"description": "This is " + self.service_name + " service running on " + self.service_ip + ":" + str(self.service_port), "cert": certString},
             server="local."
         )
         self.zeroconf.register_service(service_info)
